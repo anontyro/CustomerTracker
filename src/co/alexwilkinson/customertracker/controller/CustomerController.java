@@ -10,26 +10,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import co.alexwilkinson.customertracker.dao.CustomerDAO;
 import co.alexwilkinson.customertracker.entity.Customer;
+import co.alexwilkinson.customertracker.service.CustomerService;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 	
-	//inject the dao into the controller
+	//inject customer service now instead of just the DAO
 	@Autowired
-	private CustomerDAO customerDAO;
+	private CustomerService customerService;
 	
 	
 	@GetMapping("/list")
 	public String listCustomers(Model model){
 		
 		//get customers
-		List<Customer> theCustomers = customerDAO.getCustomers();
+		List<Customer> theCustomers = customerService.getCustomers();
 		
 		//add to the model
 		model.addAttribute("customers", theCustomers);
 		
 		return "list-customers";
+	}
+	
+	@GetMapping("/showFormForAdd")
+	public String showFormForAdd(Model themodel){
+		return "customer-form";
 	}
 	
 }

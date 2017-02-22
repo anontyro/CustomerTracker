@@ -5,8 +5,7 @@
 <html>
 <head>
 
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/style/bootstrap.min.css" />
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/style/style.css" />
+<%@ include file="header.jsp" %>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Customer List</title>
@@ -22,7 +21,11 @@
 	<div id="main-container">
 		<div id="content">
 		
-		<table>
+		<input type="button" value="Add Customer" class="btn btn-default"
+		onclick="window.location.href='showFormForAdd'; return false;" 
+		/>
+		<br><br>
+		<table class="table table-striped">
 			<tr>
 				<th>Firstname </th>
 				<th>Lastname</th>
