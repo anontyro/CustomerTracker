@@ -1,3 +1,9 @@
 th{
 		color: #CED6D5 ;
 }
+
+
+
+.form-horizontal .form-group {
+    margin: 30px 30px 30px 30px;
+}
