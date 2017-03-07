@@ -29,7 +29,7 @@
 	</div>
 	
 	<div class="form-group">
-		<input type="submit" value="Save" class="save btn btn-primary"/>
+		<input type="submit" value="Save" class="btn btn-primary"/>
 		<a href = "${pageContext.request.contextPath}/customer/list" class="btn btn-default">Back</a>
 	</div>
 
