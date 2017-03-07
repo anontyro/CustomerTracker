@@ -11,24 +11,27 @@
 </div>
 
 <form:form action="saveCustomer" modelAttribute="customer" method="POST" class="form-horizontal">
-
-<div class="form-group">
-	<label>First Name</label>
-	<form:input path="firstname" class="form-control" />
 	
-	<label>Last Name</label>
-	<form:input path="lastname" class="form-control" />
-	
-	<label>E-Mail</label>
-	<form:input path="email" class="form-control" />
-	
+	<!-- used for updating to associate this data with the customer id -->
+	<form:hidden path="id"/>
 
-</div>
-
-<div class="form-group">
-	<input type="submit" value="Save" class="save btn btn-primary"/>
-	<a href = "${pageContext.request.contextPath}/customer/list" class="btn btn-default">Back</a>
-</div>
+	<div class="form-group">
+		<label>First Name</label>
+		<form:input path="firstname" class="form-control" />
+		
+		<label>Last Name</label>
+		<form:input path="lastname" class="form-control" />
+		
+		<label>E-Mail</label>
+		<form:input path="email" class="form-control" />
+		
+	
+	</div>
+	
+	<div class="form-group">
+		<input type="submit" value="Save" class="save btn btn-primary"/>
+		<a href = "${pageContext.request.contextPath}/customer/list" class="btn btn-default">Back</a>
+	</div>
 
 </form:form>
 
